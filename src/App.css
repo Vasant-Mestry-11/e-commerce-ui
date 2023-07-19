@@ -52,6 +52,23 @@ label {
   font-weight: 500;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5f5f5f;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c7c7c7;
+}
+
 :root {
   --primary: #5b79a8;
   --secondary: #f1ba85;
