@@ -1,12 +1,16 @@
 import { useReducer } from "react";
-import Header from "../../components/Header";
+// import Header from "../../components/Header";
 import "./Login.css";
 import { INPUT_TYPE_CHANGE, initialState } from "../../constants/Login";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/slices/UserSlice";
 
 const Login = () => {
+  const dispatch = useDispatch();
+
   const reducer = (state = initialState, action) => {
     switch (action.type) {
       case INPUT_TYPE_CHANGE: {
@@ -20,12 +24,12 @@ const Login = () => {
     }
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatchInput] = useReducer(reducer, initialState);
   const { username, password } = state;
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    dispatch({
+    dispatchInput({
       type: INPUT_TYPE_CHANGE,
       payload: e.target.value,
       fieldName: e.target.name,
@@ -33,12 +37,15 @@ const Login = () => {
   };
 
   const handleClick = () => {
-    if (username || password) navigate("/");
+    if (username || password) {
+      dispatch(login());
+      navigate("/home");
+    }
   };
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="login-container">
         <div className="input-wrapper">
           <h2 className="login-title">Log In</h2>

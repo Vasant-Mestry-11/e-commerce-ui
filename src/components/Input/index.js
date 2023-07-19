@@ -4,7 +4,7 @@ const Input = ({
   name,
   label,
   placeholder,
-  classNames,
+  classNames = "",
   type = "text",
   value,
   onChange,
