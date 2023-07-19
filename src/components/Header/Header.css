@@ -1,6 +1,6 @@
 .header {
   background-color: var(--primary);
-  height: 3rem;
+  height: var(--header-height);
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,8 @@
 
 .nav__items a:hover,
 .nav__items a:active,
-.header__logo:hover {
+.header__logo:hover,
+.nav__items .active {
   color: var(--secondary);
   cursor: pointer;
 }

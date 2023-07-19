@@ -48,15 +48,29 @@ a {
   text-decoration: none;
 }
 
+label {
+  font-weight: 500;
+}
+
 :root {
   --primary: #5b79a8;
   --secondary: #f1ba85;
   --tertiary: #3d3930;
   --background: #d0d8db;
   --background-light: #eef0f4;
+
+  --header-height: 3rem;
 }
 
-.btn {
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.5rem;
+.btn-primary {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--background-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary);
+  border: 1px solid var(--tertiary);
+  color: var(--tertiary);
+  transition: 0.2s all ease-in-out;
 }

@@ -6,13 +6,13 @@
   cursor: pointer;
   transform: scale(0.97);
   border-radius: 0.5rem;
+  transition: 0.2s all linear;
 }
 
 .product__container:hover {
   background-color: var(--background);
   box-shadow: 2px 2px 12px 1px var(--tertiary);
   transform: scale(1);
-  transition: 0.2s all linear;
 }
 
 .product__image img {
@@ -42,20 +42,4 @@
 
 .product__btn {
   margin-top: 1rem;
-  align-self: flex-end;
-  border: none;
-}
-
-.product__btn {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--background-light);
-  cursor: pointer;
-}
-
-.product__btn:hover {
-  background-color: var(--secondary);
-  border: 1px solid var(--tertiary);
-  color: var(--tertiary);
-  transition: 0.3s background-color ease-in-out;
 }
