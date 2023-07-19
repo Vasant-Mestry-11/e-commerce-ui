@@ -22,7 +22,7 @@ function App() {
         <Route index path="/login" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="*" element={<Navigate to="/login" />} />
+        <Route path="/*" element={<Navigate to="/login" />} />
       </Routes>
     </div>
   );
